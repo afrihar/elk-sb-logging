@@ -35,12 +35,23 @@ services:
     volumes:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
     ports:
-      - "5001:5000"
+      - "5001:5001"
       - "9600:9600"
     networks:
       - elk
     depends_on:
       - elasticsearch
+
+  springboot:
+    build: .
+    container_name: springboot
+    ports:
+      - "8080:8080"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+      - logstash
 
 networks:
   elk:
