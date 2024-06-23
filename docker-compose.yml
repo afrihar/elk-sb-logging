@@ -41,5 +41,9 @@ services:
       - elk
     depends_on:
       - elasticsearch
+
 networks:
   elk:
+
+volumes:
+  esdata:
