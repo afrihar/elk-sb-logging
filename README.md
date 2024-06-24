@@ -22,6 +22,12 @@ Berikut langkah-langkah untuk menjalankan proyek ini:
 4. Jalankan perintah `docker-compose up -d` untuk memulai semua layanan ELK dan aplikasi Spring Boot.
 5. Buka Kibana di browser dengan membuka alamat `http://localhost:5601`.
 6. Navigasikan ke tab Discover di Kibana untuk melihat log yang telah diindeks.
+7. Simulasi request#1
+```curl http://localhost:8080/endpoint1```
+8. Simulasi request#2
+```curl http://localhost:8080/endpoint2```
+9. Simulasi request#3
+```curl --location 'localhost:8080/endpoint3' --header 'Content-Type: application/json' --data '{"test":"ok"}'```
 
 ## Kontribusi
 
